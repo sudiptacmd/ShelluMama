@@ -1,0 +1,10 @@
+total 44
+drwxrwxrwx 1 sudi sudi  4096 Apr 14 20:48 .
+drwxrwxrwx 1 sudi sudi  4096 Apr 14 20:29 ..
+drwxrwxrwx 1 sudi sudi  4096 Apr 14 20:43 .git
+-rwxrwxrwx 1 sudi sudi    68 Apr 14 20:29 .gitattributes
+-rwxrwxrwx 1 sudi sudi     0 Apr 14 20:48 output.txt
+-rwxrwxrwx 1 sudi sudi  2522 Apr 14 20:29 readme.md
+-rwxrwxrwx 1 sudi sudi 22144 Apr 14 20:45 shell
+-rwxrwxrwx 1 sudi sudi 14826 Apr 14 20:43 shell.c
+"test file"
