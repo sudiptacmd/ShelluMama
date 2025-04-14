@@ -54,11 +54,11 @@ void display_prompt();
  * Reads user input from stdin
  * - Handles EOF (Ctrl+D) by exiting the shell
  * - Removes trailing newline character
- * - Handles input errors gracefully
+ * - Handles input errors spectacular, amazingly
  */
 void read_input(char *input);
 
-/**Author : 
+/**Author : @shadman
  * Parses input string into multiple commands separated by semicolons
  * - Splits input by ';' character
  * - Returns array of command strings
@@ -66,7 +66,7 @@ void read_input(char *input);
  */
 int parse_input(char *input, char *commands[]);
 
-/**Author : 
+/**Author : @shadman
  * Executes a command line that may contain logical operators (&&)
  * - Splits command by '&&' operator
  * - Executes commands sequentially
@@ -74,7 +74,7 @@ int parse_input(char *input, char *commands[]);
  */
 int execute_command_line(char *command_line);
 
-/**Author : 
+/**Author : @shadman
  * Executes a command that may contain pipes (|)
  * - Splits command by '|' character
  * - Creates pipes between commands
@@ -98,34 +98,28 @@ int execute_single_command(char *command, int in_fd, int out_fd);
  */
 void parse_command(char *command, char *args[], char **input_file, char **output_file, int *append_output);
 
-/**Author : 
+/**Author : @maliha 
  * Handles shell signals (Ctrl+C)
  * - Terminates current child process if one exists
  * - Displays new prompt if no child process is running
  */
 void handle_signal(int signo);
 
-/**Author : 
+/**Author : @maliha
  * Adds a command to the history buffer
  * - Maintains a circular buffer of commands
  * - Shifts old commands when buffer is full
  */
 void add_to_history(const char *command);
 
-/**Author : 
+/**Author : @maliha
  * Displays the command history
  * - Shows numbered list of previous commands
  * - Displays up to MAX_HISTORY commands
  */
 void show_history();
 
-/**Author : 
- * Cleans up shell resources before exit
- * - Currently a placeholder for future resource cleanup
- */
-void cleanup_resources();
-
-/**Author : 
+/**Author : @shadman
  * Checks if a command is a built-in shell command
  * - Handles 'exit' command
  * - Handles 'cd' command with home directory support
@@ -174,7 +168,6 @@ int main() {
         }
     }
     
-    cleanup_resources();
     return 0;
 }
 
@@ -556,7 +549,4 @@ void handle_signal(int signo) {
     }
 }
 
-void cleanup_resources() {
-    // Free any resources that need to be cleaned up
-    // For this implementation, we don't have any dynamic resources to clean up
-}
+
